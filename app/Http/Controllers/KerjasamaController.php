@@ -172,22 +172,22 @@ class KerjasamaController extends Controller
         if($validatedData){       
                    
             $data = [
-                'ringkasanmou' => $request->ringkasanmou,                
+                'ringkasanmou' => strip_tags($request->ringkasanmou),
                 'nomormoa' => $request->nomormoa,
-                'deskripsimoa' => $request->deskripsimoa,
+                'deskripsimoa' => strip_tags($request->deskripsimoa),
                 'tglmulaimoa' => $request->tglmulaimoa,
-                'tglberakhirmoa' => $request->tglberakhirmoa,               
-                'misiprogram' => $request->misiprogram,
-                'targetprogram' => $request->targetprogram,
-                'alasanmitra' => $request->alasanmitra,
-                'prinsipkerjasama' => $request->prinsipkerjasama,
-                'manfaatkerjasama' => $request->manfaatkerjasama,
-                'tantanganpelaksanaan' => $request->tantanganpelaksanaan,
-                'kepemilikanhakcipta' => $request->kepemilikanhakcipta,
-                'mekanismeresipokal' => $request->mekanismeresipokal,
-                'keberlanjutankerjasama' => $request->keberlanjutankerjasama,
-                'hakdankewajiban' => $request->hakdankewajiban,
-                'haktercantum' => $request->haktercantum,          
+                'tglberakhirmoa' => $request->tglberakhirmoa,
+                'misiprogram' => strip_tags($request->misiprogram),
+                'targetprogram' => strip_tags($request->targetprogram),
+                'alasanmitra' => strip_tags($request->alasanmitra),
+                'prinsipkerjasama' => strip_tags($request->prinsipkerjasama),
+                'manfaatkerjasama' => strip_tags($request->manfaatkerjasama),
+                'tantanganpelaksanaan' => strip_tags($request->tantanganpelaksanaan),
+                'kepemilikanhakcipta' => strip_tags($request->kepemilikanhakcipta),
+                'mekanismeresipokal' => strip_tags($request->mekanismeresipokal),
+                'keberlanjutankerjasama' => strip_tags($request->keberlanjutankerjasama),
+                'hakdankewajiban' => strip_tags($request->hakdankewajiban),
+                'haktercantum' => $request->haktercantum,    
             ];
 
             if($request->filemou != null){
